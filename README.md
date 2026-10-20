@@ -1,2 +1,13 @@
-# detection-rules
-Detection rules for SIEM (Splunk and Sigma format) with explanations of what each rule detects and how it was tested.
+# Detection Rules
+
+Detection rules written for SIEM (Splunk SPL and Sigma format). Each rule has a short explanation of what it detects and how it was tested.
+
+## Rules
+
+- 
+
+## Each rule includes
+- Detection goal and MITRE ATT&CK technique
+- Query (SPL or Sigma)
+- Test data or log example that triggers it
+- Known false positives
