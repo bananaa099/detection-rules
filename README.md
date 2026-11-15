@@ -7,6 +7,9 @@ Detection rules written for SIEM (Splunk SPL and Sigma format). Each rule has a 
 **Windows**
 - encoded-powershell
 - new-admin-account-alert
+- hosts-file-modified - DNS poisoning / AV blocking through the hosts file (from THM Investigating Windows)
+- run-key-temp-folder - Run key starting a program from TMP / Temp (from THM Investigating Windows)
+- mimikatz-commandline - Mimikatz modules on the command line (from THM Investigating Windows)
 
 **Web**
 - credential-stuffing-login - many failed logins then a success from one IP (from HTB Meerkat)

@@ -45,3 +45,12 @@ Before closing, I would check if the change was planned and who ran it.
 2. Was it expected / a ticket for it
 3. What the new account did after it was created
 4. If it wasn't planned - disable the account and escalate
+
+## Seen in a case
+
+In THM Investigating Windows the attacker added the built-in **Guest** account to Administrators. Guest already exists, so there was no 4720, only 4732. The first search above would miss it. The simple search catches it, so I'd also alert on 4732 alone when the group is Administrators:
+
+```spl
+index=* EventCode=4732 Group_Name="Administrators"
+| table _time, host, src_user, MemberName
+```
